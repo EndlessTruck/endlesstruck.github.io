@@ -6562,7 +6562,7 @@ if (typeof window !== "undefined" && !window.famobi_tracking) {
                         reject();
                     });
 
-                    xhttp.open('POST', tracking.endpointUrl + 'event/user', true);
+                    xhttp.open('GET', tracking.endpointUrl + 'event/user', true);
                     xhttp.setRequestHeader('Content-type', 'application/json');
                     xhttp.setRequestHeader('X-Version', tracking.version);
                     xhttp.setRequestHeader('X-Game', tracking.game);
