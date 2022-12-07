@@ -6471,7 +6471,7 @@ if (typeof window !== "undefined" && !window.famobi_tracking) {
     !function(a, b) {
 
         var tracking = {
-            endpointUrl: 'data/',
+            endpointUrl: 'json/null.json?data/',
             game: '',
             uidStorageId: 'trackingUid',
             uid: null,
@@ -6544,12 +6544,12 @@ if (typeof window !== "undefined" && !window.famobi_tracking) {
                             log('tracking init - response', this.response);
 
                             var data = JSON.parse(this.response).data;
-                            var splitTests = data.splitTests;
-                            storage.setItem(tracking.uidStorageId, data.uid);
+                            // var splitTests = data.splitTests;
+                            // storage.setItem(tracking.uidStorageId, data.uid);
 
-                            log('tracking initialized - new user id received', data.uid);
+                            // log('tracking initialized - new user id received', data.uid);
 
-                            resolve(data.uid);
+                            // resolve(data.uid);
                         }
                     };
 
@@ -7481,7 +7481,7 @@ fg_api.prototype.geoModule = function() {
 			setTimeout(reject, 10e3);
 			self.rest.get(M.geolocationUrl).then(function(result) {
 				if (!result || !result.countryCode) {
-					reject();
+					// reject();
 					return;
 				}
 				faZepto.extend(M.geodata, result);
